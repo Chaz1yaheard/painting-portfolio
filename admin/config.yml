@@ -1,0 +1,17 @@
+backend:
+  name: github
+  repo: Chaz1yaheard/painting-portfolio
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "paintings"
+    label: "Paintings"
+    folder: "images"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
