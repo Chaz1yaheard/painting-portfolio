@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kanchan Rai | Paintings</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="logo">Kanchan Rai</div>
+    <nav>
+      <a href="#gallery">Gallery</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Paintings by Kanchan</h1>
+    <p>Acrylic and watercolor works, 2023–2026</p>
+  </section>
+
+ <section id="gallery" class="gallery">
+    <div class="painting" onclick="openLightbox(this)">
+      <img src="images/painting1.jpg" alt="Painting 1">
+      <p>The Dark Knight</p>
+    </div>
+    <div class="painting" onclick="openLightbox(this)">
+      <img src="images/painting2.jpg" alt="Painting 2">
+      <p>Work In Progress</p>
+    </div>
+    <div class="painting" onclick="openLightbox(this)">
+      <img src="images/painting3.jpg" alt="Painting 3">
+      <p>Missing the Sea</p>
+    </div>
+    <div class="painting" onclick="openLightbox(this)">
+      <img src="images/painting4.jpg" alt="Painting 4">
+      <p>Batman Begins</p>
+    </div>
+  </section>
+
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <section id="about" class="about">
+    <h2>About the artist</h2>
+    <p>Write a couple of sentences here about yourself, your style, and what inspires your work.</p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>Email: rkanchan105@gmail.com</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Kanchan Rai</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
