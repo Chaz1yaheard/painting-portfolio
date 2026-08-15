@@ -9,9 +9,14 @@ public_folder: "/images"
 collections:
   - name: "paintings"
     label: "Paintings"
-    folder: "images"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Image", name: "image", widget: "image" }
+    files:
+      - file: "content/paintings.json"
+        label: "Paintings List"
+        name: "paintings"
+        fields:
+          - label: "Paintings"
+            name: "paintings"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }

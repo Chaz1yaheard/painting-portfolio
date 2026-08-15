@@ -1,0 +1,8 @@
+{
+  "paintings": [
+    { "title": "The Dark Knight", "image": "/images/painting1.jpg" },
+    { "title": "Work In Progress", "image": "/images/painting2.jpg" },
+    { "title": "Missing the Sea", "image": "/images/painting3.jpg" },
+    { "title": "Batman Begins", "image": "/images/painting4.jpg" }
+  ]
+}

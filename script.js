@@ -20,6 +20,19 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1 });
 
-document.querySelectorAll('.painting').forEach(el => {
-  observer.observe(el);
-});
+async function loadGallery() {
+  const response = await fetch('content/paintings.json');
+  const data = await response.json();
+  const gallery = document.getElementById('gallery');
+
+  data.paintings.forEach(painting => {
+    const div = document.createElement('div');
+    div.className = 'painting';
+    div.innerHTML = `<img src="${painting.image}" alt="${painting.title}"><p>${painting.title}</p>`;
+    div.addEventListener('click', () => openLightbox(div));
+    gallery.appendChild(div);
+    observer.observe(div);
+  });
+}
+
+loadGallery();
