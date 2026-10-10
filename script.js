@@ -31,7 +31,16 @@ async function loadGallery() {
     div.innerHTML = `<img src="${painting.image}" alt="${painting.title}"><p>${painting.title}</p>`;
     div.addEventListener('click', () => openLightbox(div));
     gallery.appendChild(div);
-    observer.observe(div);
+  });
+
+  // Wait two frames so the browser paints the invisible starting state first
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      document.querySelectorAll('.painting').forEach((el, i) => {
+        el.style.transitionDelay = `${i * 0.08}s`;
+        observer.observe(el);
+      });
+    });
   });
 }
 
