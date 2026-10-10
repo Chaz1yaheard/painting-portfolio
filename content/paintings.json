@@ -1,8 +1,56 @@
 {
   "paintings": [
-    { "title": "The Dark Knight", "image": "/images/painting1.jpg" },
-    { "title": "Work In Progress", "image": "/images/painting2.jpg" },
-    { "title": "Missing the Sea", "image": "/images/painting3.jpg" },
-    { "title": "Batman Begins", "image": "/images/painting4.jpg" }
+    {
+      "title": "The Dark Knight",
+      "image": "/images/painting1.jpg"
+    },
+    {
+      "title": "Work In Progress",
+      "image": "/images/painting2.jpg"
+    },
+    {
+      "title": "Missing the Sea",
+      "image": "/images/painting3.jpg"
+    },
+    {
+      "title": "Batman Begins",
+      "image": "/images/painting4.jpg"
+    },
+    {
+      "title": "Bal Hanuman",
+      "image": "/images/BalHanuman.jpg"
+    },
+    {
+      "title": "Mandala",
+      "image": "/images/02A7082E-B836-4F6E-8BBD-251A93360EF4.jpeg"
+    },
+    {
+      "title": "Back in my fashion Designing Days",
+      "image": "/images/53AE2EFB-FE8A-44A8-B5E5-8AB4D7C0F0B6.jpeg"
+    },
+    {
+      "title": "From when I was young",
+      "image": "/images/81D2A654-1743-4A2B-BCD7-44FFC8ACA346.jpeg"
+    },
+    {
+      "title": "Long Dress",
+      "image": "/images/9CABB5A2-3A89-4B72-85C3-E0CD2F6529CE.jpeg"
+    },
+    {
+      "title": "A special one for me",
+      "image": "/images/IMG_0070.jpeg"
+    },
+    {
+      "title": "My longing",
+      "image": "/images/IMG_2697.jpeg"
+    },
+    {
+      "title": "This was a Surprise",
+      "image": "/images/IMG_2624.jpeg"
+    },
+    {
+      "title": "For my love",
+      "image": "/images/IMG_0994.jpeg"
+    }
   ]
 }
