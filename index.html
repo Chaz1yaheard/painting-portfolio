@@ -30,8 +30,14 @@
 
  <section id="gallery" class="gallery"></section>
 
-  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-    <img id="lightbox-img" src="" alt="">
+      <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Painting viewer" aria-hidden="true">
+    <button class="lb-btn lb-close" aria-label="Close">&times;</button>
+    <button class="lb-btn lb-prev" aria-label="Previous painting">&#8249;</button>
+    <figure class="lb-figure">
+      <img id="lightbox-img" src="" alt="">
+      <figcaption id="lightbox-caption"></figcaption>
+    </figure>
+    <button class="lb-btn lb-next" aria-label="Next painting">&#8250;</button>
   </div>
 
   <section id="about" class="about">

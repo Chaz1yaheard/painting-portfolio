@@ -101,14 +101,19 @@ a:focus-visible,
 
 /* Gallery */
 .gallery {
-  columns: 3 260px;
-  column-gap: 32px;
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
   padding: 0 var(--gutter) 80px;
+}
+
+.gallery-col {
+  flex: 1;
+  min-width: 0;
 }
 
 .painting {
   cursor: pointer;
-  break-inside: avoid;
   margin-bottom: 40px;
   opacity: 0;
   transform: translateY(20px);
@@ -148,20 +153,61 @@ a:focus-visible,
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(28, 20, 12, 0.94);
+  background: rgba(28, 20, 12, 0.95);
   align-items: center;
   justify-content: center;
+  gap: 20px;
+  padding: 24px;
   cursor: zoom-out;
   z-index: 100;
 }
 
-.lightbox img {
-  max-width: 88%;
-  max-height: 88%;
-}
-
 .lightbox.active {
   display: flex;
+}
+
+.lb-figure {
+  cursor: default;
+  text-align: center;
+}
+
+.lb-figure img {
+  display: block;
+  max-width: min(80vw, 900px);
+  max-height: 80vh;
+  margin: 0 auto;
+}
+
+.lb-figure figcaption {
+  margin-top: 14px;
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 20px;
+  color: #efe6d4;
+}
+
+.lb-btn {
+  background: none;
+  border: 0;
+  color: #efe6d4;
+  font-size: 44px;
+  line-height: 1;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+.lb-btn:hover { color: #ffffff; }
+
+.lb-btn:focus-visible {
+  outline: 2px solid #efe6d4;
+  outline-offset: 2px;
+}
+
+.lb-close {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-size: 36px;
 }
 
 /* About and contact */
@@ -197,14 +243,12 @@ footer {
     gap: 32px;
     padding-top: 40px;
   }
-  .gallery {
-    columns: 2 150px;
-    column-gap: 20px;
-  }
+  .gallery { gap: 20px; }
 }
 
-@media (max-width: 480px) {
-  .gallery { columns: 1; }
+@media (max-width: 600px) {
+  .lb-prev, .lb-next { display: none; }
+  .lb-figure img { max-width: 92vw; }
 }
 
 @media (prefers-reduced-motion: reduce) {
